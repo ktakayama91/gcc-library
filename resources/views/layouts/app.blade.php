@@ -12,7 +12,11 @@
         
     </head>
 
-    <body>       
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">                
+            </nav>
+        </div>
 
         @yield('content')
 
