@@ -7,8 +7,7 @@
         <title>Laravel Quickstart - Basic</title>
 
         <!-- CSS And JavaScript -->
-        <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         
     </head>
 
