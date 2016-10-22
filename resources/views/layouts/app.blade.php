@@ -7,12 +7,15 @@
         <title>Laravel Quickstart - Basic</title>
 
         <!-- CSS And JavaScript -->
-        <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ asset('font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         
     </head>
 
-    <body>       
+    <body>
+        <div class="container-fluid">
+            <nav class="navbar navbar-inverse">                
+            </nav>
+        </div>
 
         @yield('content')
 
