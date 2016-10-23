@@ -44,15 +44,12 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-        $validator = Validator::make($request->all(), [
-        'name' => 'required|max:255',
-	    ]);
 
-	    if ($validator->fails()) {
-	        return redirect('/')
-	            ->withInput()
-	            ->withErrors($validator);
-	    }
+        $this->validate($request, [
+            'cod' => 'required|max:255',
+            'name' => 'required|max:255',
+            'author' => 'required|max:255'
+            ]);	    
 
 	    $book = new Book;
 	    $book->cod = $request->cod;
