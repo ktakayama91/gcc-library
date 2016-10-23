@@ -14,7 +14,7 @@
                 @include('common.errors')        
 
                 <!-- New Book Form -->
-                <form action="{{ url('books') }}" method="POST">
+                <form action="{{ url('book') }}" method="POST">
                     {{ csrf_field() }}
 
                    
