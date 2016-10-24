@@ -16,8 +16,6 @@
                 <!-- New Book Form -->
                 <form action="{{ url('book') }}" method="POST">
                     {{ csrf_field() }}
-
-                   
                     <div class="form-group row">                        
                         <div class="col-sm-4">
                             <label for="book-cod">Código</label>
@@ -53,7 +51,6 @@
                 <div class="panel-heading">
                     <h3>Library</h3>
                 </div>
-
                 <div class="panel-body">
                     <div class="table-responsive">
                     <table class="table table-striped">
