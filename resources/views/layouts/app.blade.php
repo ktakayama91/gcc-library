@@ -11,17 +11,15 @@
         
     </head>
 
-    <body>
-        <div class="container-fluid">
-            <nav class="navbar navbar-inverse">                
-            </nav>
-        </div>
+    <body>       
+
+        @include('layouts.navbar')
 
         @yield('content')
 
     <!-- jQuery -->    
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="{{ asset('bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     </body>
 </html>
