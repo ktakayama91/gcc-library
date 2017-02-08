@@ -6,9 +6,9 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-use App\Book;
+use App\User;
 
-class BookController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,11 +17,9 @@ class BookController extends Controller
      */
     public function index()
     {
-        $books = Book::orderBy('created_at', 'asc')->get();
+        $users = User::orderBy('created_at', 'asc')->get();
 
-	    return view('books', [
-	        'books' => $books
-	    ]);   
+        return $users;
     }
 
     /**
@@ -42,20 +40,7 @@ class BookController extends Controller
      */
     public function store(Request $request)
     {
-
-        $this->validate($request, [
-            'cod' => 'required|max:255',
-            'name' => 'required|max:255',
-            'author' => 'required|max:255'
-            ]);	    
-
-	    $book = new Book;
-	    $book->cod = $request->cod;
-	    $book->name = $request->name;
-	    $book->author = $request->author;
-	    $book->save();
-
-	    return redirect('/');
+        //
     }
 
     /**
@@ -100,9 +85,6 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        $book = Book::find($id);
-        $book->delete();
-
-    	return redirect('/');
+        //
     }
 }
