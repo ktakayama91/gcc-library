@@ -15,4 +15,12 @@ class Loan extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    /**
+    *Get the book of the loan.
+    */
+    public function book()
+    {
+    	return $this->belongsTo(Book::class);
+    }
 }

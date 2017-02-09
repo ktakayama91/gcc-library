@@ -66,7 +66,9 @@ class BookController extends Controller
      */
     public function show($id)
     {
-        //
+        $book = Book::find($id);
+
+        return $book;
     }
 
     /**
@@ -100,9 +102,6 @@ class BookController extends Controller
      */
     public function destroy($id)
     {
-        $book = Book::find($id);
-        $book->delete();
-
-    	return redirect('/');
+        //
     }
 }

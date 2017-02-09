@@ -52,7 +52,9 @@ class LoanController extends Controller
      */
     public function show($id)
     {
-        //
+        $loan = Loan::find($id);
+
+        return $loan;
     }
 
     /**

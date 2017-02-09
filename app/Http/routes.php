@@ -15,8 +15,11 @@ use Illuminate\Http\Request;
 
 Route::get('/', 'BookController@index');
 Route::post('/book', 'BookController@store');
+Route::get('/books/{book}', 'BookController@show');
 Route::delete('/books/{book}', 'BookController@destroy');
 
 Route::get('/loans', 'LoanController@index');
+Route::get('/loans/{loan}', 'LoanController@show');
 
 Route::get('/users', 'UserController@index');
+Route::get('/users/{user}', 'UserController@show');
