@@ -23,3 +23,6 @@ Route::get('/loans/{loan}', 'LoanController@show');
 
 Route::get('/users', 'UserController@index');
 Route::get('/users/{user}', 'UserController@show');
+Route::auth();
+
+Route::get('/home', 'HomeController@index');
