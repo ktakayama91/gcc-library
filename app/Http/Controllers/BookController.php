@@ -19,9 +19,7 @@ class BookController extends Controller
     {
         $books = Book::orderBy('created_at', 'asc')->get();
 
-	    return view('books', [
-	        'books' => $books
-	    ]);   
+	    return view('books', ['books' => $books]);
     }
 
     /**
@@ -47,7 +45,7 @@ class BookController extends Controller
             'cod' => 'required|max:255',
             'name' => 'required|max:255',
             'author' => 'required|max:255'
-            ]);	    
+            ]);
 
 	    $book = new Book;
 	    $book->cod = $request->cod;
